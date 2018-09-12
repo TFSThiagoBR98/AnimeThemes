@@ -22,13 +22,12 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontFlash = [
-        //
+        'password',
+        'password_confirmation',
     ];
 
     /**
      * Report or log an exception.
-     *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
      * @param  \Exception  $exception
      * @return void

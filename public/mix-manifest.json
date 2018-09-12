@@ -1,3 +1,5 @@
 {
-    "/js/vendor/jquery.min.js": "/js/vendor/jquery.min.js"
+    "/js/app.js": "/js/app.js",
+    "/css/app.light.css": "/css/app.light.css",
+    "/css/app.dark.css": "/css/app.dark.css"
 }

@@ -1,18 +1,16 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
-mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/vendor/jquery.min.js');
+/*
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for the application as well as bundling up all the JS files.
+ |
+ */
 
-var modernizr = require("modernizr");
-
-modernizr.build({
-    "options": [
-        "setClasses"
-    ],
-    "feature-detects": [
-        "video"
-    ]
-}, function (result) {
-    var modernizrJS = new File('public/js/vendor/modernizr.min.js');
-    modernizrJS.write(result);
-    modernizrJS.minify();
-});
+mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.light.scss', 'public/css')
+   .sass('resources/sass/app.dark.scss', 'public/css');

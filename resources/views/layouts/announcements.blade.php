@@ -1,1 +1,1 @@
-<p class="alert alert-info"><strong>We are currently processing backlog</strong> - Please check back regularly for progress updates and new site features!<p>
+<p class="alert alert-primary"><strong>We are currently processing backlog</strong> - Please check back regularly for progress updates and new site features!<p>
