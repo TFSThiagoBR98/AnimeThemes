@@ -62,14 +62,23 @@ return [
             'visibility' => 'public',
         ],
 
+        // Developer Local Storage
+        // If you not have S3, use that
+        // {project_root}/storage/spaces
         'spaces' => [
+            'driver' => 'local',
+            'root' => storage_path('spaces'),
+        ]
+
+        // Production S3
+        /*'spaces' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
             'endpoint' => env('AWS_ENDPOINT'),
-        ],
+        ],*/
 
     ],
 

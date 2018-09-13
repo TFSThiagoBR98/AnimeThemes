@@ -17,3 +17,8 @@ Route::resource('video', 'VideosController', ['only' => [
 ]]);
 Route::get('/sitemap', 'SitemapController@index');
 Route::get('/sitemap/videos', 'SitemapController@videos')->name('video_sitemap');
+
+Route::get('/playlist', 'PlaylistController@index');
+Route::get('/playlist/play', 'PlaylistController@play');
+Route::get('/playlist/menu', 'PlaylistController@menu');
+Route::post('/playlist/create_pl', 'PlaylistController@create_pl');

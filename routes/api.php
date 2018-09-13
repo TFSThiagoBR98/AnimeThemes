@@ -13,9 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('api')->get('/collection', function () {
-    return response()->json(['message' => 'Jobs API', 'status' => 'Connected']);;
-});
+Route::middleware('api')->get('/collection', 'ApiController@getAllCollections');
 
 Route::middleware('api')->get('/collection/{id}', function ($id) {
     return response()->json(['collectionId' => $id, 'status' => 'Connected']);;

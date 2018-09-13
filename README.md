@@ -10,8 +10,8 @@
 
 AnimeThemes runs on Laravel 5.5 and has the same requirements
 
-* A web server
-* `PHP >= 7.0.0`
+* A web server or `php artisan serve`
+* `PHP >= 7.1.3`
 * `composer`
 * `npm`
 
@@ -19,6 +19,7 @@ AnimeThemes runs on Laravel 5.5 and has the same requirements
 
 * Clone the repository
 * Create/edit the `.env` file, providing database and S3 storage credentials
+    * If you not have a S3 Storage comment in that in `config\filesystem.php`
 * Run `composer install` to download application packages
 * Run `npm install` to download JavaScript packages
 * Run `npm run dev` to install vendor JavaScript

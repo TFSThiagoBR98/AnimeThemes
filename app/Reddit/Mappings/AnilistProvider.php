@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mappers;
+namespace App\Reddit\Mappings;
 
 class AnilistProvider {
     public function GetAnilistIdFromMal($malId) {
