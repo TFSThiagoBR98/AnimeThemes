@@ -50,7 +50,7 @@ class RedditYearSyncCommand extends Command
          * Stage 1: Process list of pages from year_index + misc
          */
 
-        $collections = CollectionParser::getCollections();
+        $collections = CollectionParser::getAllCollections();
         /**
          * Stage 2: Create a Anime Dumper
          */

@@ -44,8 +44,4 @@ class AnimeParser {
         }
         return $text;
     }
-
-    public static function ParseHtml($nodes) {
-        //
-    }
 }

@@ -8,7 +8,7 @@ class VideosTableSeeder extends Seeder
 {
 
     public function run() {
-        DB::table('videos')->delete();
+        /*DB::table('videos')->delete();
 
         $fs = Storage::disk('spaces');
         $files = $fs->listContents('', true);
@@ -22,6 +22,6 @@ class VideosTableSeeder extends Seeder
                     'path' => $file['path']
                 ));
             }
-        }
+        }*/
     }
 }

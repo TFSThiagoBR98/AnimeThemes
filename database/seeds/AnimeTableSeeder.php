@@ -2,34 +2,28 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Reddit\CollectionParser;
+use App\Models\Anime;
+use App\Models\Theme;
+use App\Models\Video;
+
 class AnimeTableSeeder extends Seeder
 {
     /**
-     * This will fill tables with year list from:
-     * https://www.reddit.com/r/animethemes/wiki/year_index
-     * https://www.reddit.com/r/AnimeThemes/wiki/misc
+     * This will fill tables with year list
      *
      * @return void
      */
     public function run()
     {
+        $collections = CollectionParser::getAllCollections();
         
-    }
+        foreach ($collections["anime"] as $anime) {
+            Anime::create($anime);
+        }
 
-    public function GetYearList() {
-
-    }
-    
-    /**
-     * This will get all animes from a year
-     * 
-     * @return Anime[];
-     */
-    public function GetAnimefromYear() {
-
-    }
-
-    public function GetThemefromTables() {
-
+        foreach ($collections["theme"] as $theme) {
+            Theme::create($theme);
+        }
     }
 }
