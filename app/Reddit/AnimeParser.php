@@ -13,7 +13,17 @@ class AnimeParser {
      * 4 - All (Default)
      */
     public static function getSeasonfromString($text) {
-        //
+        if ($text == "Winter") {
+            return 0;
+        } else if ($text == "Spring") {
+            return 1;
+        } else if ($text == "Summer") {
+            return 2;
+        } else if ($text == "Fall" || $text == "Autumn") {
+            return 3;
+        } else {
+            return 4;
+        }
     }
 
     public static function slugify($text) {
